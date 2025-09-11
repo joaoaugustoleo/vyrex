@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.darkmode-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 800px;
+}
+
+/* ícones */
+.darkmode-switch i {
+  color: #f1c40f; /* sol dourado */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.darkmode-switch .moon-icon {
+  color: #555; /* lua cinza padrão */
+}
+
+body.dark-mode .sun-icon {
+  color: #555; /* sol desativado */
+}
+
+body.dark-mode .moon-icon {
+  color: #f1c40f; /* lua ativa */
+}
+
+/* switch estilo iOS */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #7b147b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #fff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+header img {
+  height: 40px;
+}
+.logo-container {
+  display: flex;
+  text-align: left;
+  gap: 10px;
+}
+.logo-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #7b147b;
+}
+
+/* ===== JOGOS ===== */
+.games {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.btn {
+  display: block;
+  background: #7b147b;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #4e0e4e;
+}
+
+/* ===== DIFERENCIAIS ===== */
+.features {
+  padding: 40px;
+  text-align: center;
+  background: #e2e2e2;
+  margin: 40px;
+  border-radius: 10px;
+}
+
+.features h2 {
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature i {
+  font-size: 40px;
+  color: #7b147b;
+  margin-bottom: 10px;
+}
+
+/* ===== COMENTÁRIOS ===== */
+.comments {
+  padding: 40px;
+  text-align: center;
+}
+
+.comments h2 {
+  margin-bottom: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.comment-box {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.comment {
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header {
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .logo-text {
+  color: #f1f1f1;
+}
+
+body.dark-mode nav ul li a {
+  color: #f1f1f1;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #7b147b;
+}
+
+body.dark-mode .game-card,
+body.dark-mode .features,
+body.dark-mode .comment {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .btn {
+  background: #7b147b;
+}
+body.dark-mode .btn:hover {
+  background: #4e0e4e;
+}
+
+body.dark-mode footer {
+  background: #111;
+  color: #f1f1f1;
+}
+body.dark-mode .comments h2 {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
