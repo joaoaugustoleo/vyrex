@@ -14,8 +14,10 @@
     <!-- ===== HEADER ===== -->
     <header>
       <div class="logo-container">
-        <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
-        <span class="logo-text">Vyrex</span>
+        <a href="index.html">
+          <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
+          <span class="logo-text">Vyrex</span></a
+        >
       </div>
       <div class="darkmode-switch">
         <i class="fas fa-sun sun-icon"></i>
@@ -27,9 +29,9 @@
       </div>
       <nav>
         <ul>
-          <li><a href="login.html">Login</a></li>
           <li><a href="#">Ofertas</a></li>
           <li><a href="suporte.html">Suporte</a></li>
+          <li class="login-btn"><a href="login.html">Login</a></li>
         </ul>
       </nav>
     </header>
@@ -38,8 +40,8 @@
     <section class="games">
       <div class="game-card">
         <img src="ficha-tecnica-cyberpunk-2077.webp" alt="Jogo" />
-        <h3>Cyber Punk</h3>
-        <a href="#" class="btn">Comprar</a>
+        <h3>CyberPunk 2077</h3>
+        <a href="cyberpunk.html" class="btn">Comprar</a>
       </div>
       <div class="game-card">
         <img src="Clash-Royale-Wallpapers-HD.jpeg" alt="Jogo" />
@@ -91,13 +93,13 @@
         </div>
       </div>
     </section>
-
     <!-- ===== FOOTER ===== -->
     <footer>
       <p>&copy; 2025 Vyrex. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script do modo claro/escuro -->
+    <!-- Script do modo claro/escuro e modal-->
     <script src="darkmode.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

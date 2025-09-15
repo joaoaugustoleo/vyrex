@@ -28,6 +28,9 @@
         text-align: left;
         gap: 10px;
       }
+      .logo-container a {
+  text-decoration: none;
+}
       .logo-text {
         font-size: 40px;
         font-weight: bold;
@@ -117,15 +120,18 @@
   </head>
   <body>
     <header>
-      <div class="logo-container">
-        <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
-        <span class="logo-text">Vyrex</span>
+    <div class="logo-container">
+        <a href="index.html">
+          <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
+          <span class="logo-text">Vyrex</span></a
+        >
+      </div>
       </div>
       <nav>
         <ul>
-          <li><a href="#">Login</a></li>
           <li><a href="index.html">Ofertas</a></li>
           <li><a href="suporte.html">Suporte</a></li>
+          <li><a href="#">Login</a></li>
         </ul>
       </nav>
     </header>

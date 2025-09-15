@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitar Reembolso</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: #fff;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+      }
+
+      header img {
+        height: 40px;
+      }
+      .logo-container {
+        display: flex;
+        text-align: left;
+        gap: 10px;
+      }
+      .logo-container a {
+        text-decoration: none;
+      }
+      .logo-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #7b147b;
+      }
+      nav ul li.login-btn a {
+        border: 5px solid #7b147b;
+        padding: 8px;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+      nav ul li.login-btn a:hover {
+        color: white;
+        background-color: #7b147b;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0px auto;
+        padding: 0px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      p.subtitle {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #555;
+      }
+
+      .form-card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: #7b147b; /* roxo */
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #4e0e4e;
+      }
+      footer {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 1px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
+          <span class="logo-text">Vyrex</span></a
+        >
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Ofertas</a></li>
+          <li><a href="suporte.html">Suporte</a></li>
+          <li class="login-btn"><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Solicitar Reembolso</h1>
+      <p class="subtitle">
+        Preencha o formulário abaixo para solicitar o reembolso de suas compras.
+      </p>
+
+      <div class="form-card">
+        <form id="ReembolsoForm">
+          <label for="nome">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+
+          <label for="jogo">Jogo</label>
+          <input
+            type="text"
+            id="jogo"
+            name="jogo"
+            placeholder="Qual jogo deseja solicitar reembolso?"
+            required
+          />
+
+          <label for="motivo">Motivo do Reembolso</label>
+          <textarea
+            id="motivo"
+            name="motivo"
+            placeholder="Descreva o motivo do reembolso"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar Solicitação</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Vyrex. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+      const form = document.getElementById("ReembolsoForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

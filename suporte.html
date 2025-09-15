@@ -33,6 +33,9 @@
         text-align: left;
         gap: 10px;
       }
+      .logo-container a {
+        text-decoration: none;
+      }
       .logo-text {
         font-size: 40px;
         font-weight: bold;
@@ -54,6 +57,16 @@
       nav ul li a:hover {
         color: #7b147b;
       }
+      nav ul li.login-btn a {
+         border: 5px solid #7b147b;
+        padding: 8px;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+         nav ul li.login-btn a:hover {
+         color: white;
+         background-color: #7b147b;
+        }
 
       .container {
         max-width: 1100px;
@@ -80,6 +93,10 @@
         padding: 20px;
         text-align: center;
         transition: transform 0.2s;
+      }
+      .support-options a {
+        color: inherit;
+        text-decoration: none;
       }
 
       .card:hover {
@@ -132,26 +149,28 @@
         background: #5a007a;
       }
 
-      footer {
-        margin-top: 40px;
-        padding: 20px;
-        text-align: center;
-        background: #f1f1f1;
-        border-top: 1px solid #ddd;
-      }
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1px;
+  margin-top: 40px;
+}
     </style>
   </head>
   <body>
     <header>
       <div class="logo-container">
-        <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
-        <span class="logo-text">Vyrex</span>
+        <a href="index.html">
+          <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
+          <span class="logo-text">Vyrex</span></a
+        >
       </div>
       <nav>
         <ul>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="#">Ofertas</a></li>
+          <li><a href="index.html">Ofertas</a></li>
           <li><a href="#">Suporte</a></li>
+          <li class="login-btn"><a href="login.html">Login</a></li>
         </ul>
       </nav>
     </header>
@@ -161,15 +180,17 @@
       <p style="text-align: center">
         Encontre ajuda rápida ou fale com nosso time de atendimento 24/7.
       </p>
-
+         <a href="faq.html">
       <div class="support-options">
         <div class="card">
-          <i class="fas fa-question-circle"></i>
-          <h3>FAQ</h3>
-          <p>
-            Veja as perguntas mais frequentes sobre compras, pagamentos e jogos.
-          </p>
-        </div>
+            <i class="fas fa-question-circle"></i>
+            <h3>FAQ</h3>
+            <p>
+              Veja as perguntas mais frequentes sobre compras, pagamentos e
+              jogos.
+            </p>
+          </div></a
+        >
         <div class="card">
           <i class="fas fa-headset"></i>
           <h3>Atendimento</h3>
@@ -177,16 +198,18 @@
             Converse com nossa equipe via chat ou e-mail sempre que precisar.
           </p>
         </div>
+        <a href="reembolso.html">
         <div class="card">
           <i class="fas fa-undo"></i>
           <h3>Reembolsos</h3>
           <p>Solicite o reembolso de suas compras de forma rápida e segura.</p>
         </div>
+        </a>
       </div>
 
       <div class="contact-form">
         <h2>Fale Conosco</h2>
-        <form>
+        <form id="SuporteForm">
           <label for="nome">Nome</label>
           <input type="text" id="nome" placeholder="Digite seu nome" required />
 
@@ -213,5 +236,13 @@
     <footer>
       <p>© 2025 Vyrex - Todos os direitos reservados</p>
     </footer>
+        <script>
+      const form = document.getElementById("SuporteForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        window.location.href = "index.html";
+      });
+    </script>
   </body>
 </html>
