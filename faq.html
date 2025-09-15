@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Vyrex</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: #fff;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+      }
+
+      header img {
+        height: 40px;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #7b147b;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .faq {
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        background: #e6dbff;
+        padding: 18px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 20px;
+        background: #fff;
+      }
+
+      .faq-answer p {
+        padding: 15px 0;
+        font-size: 16px;
+        color: #444;
+      }
+
+      .faq.active .faq-answer {
+        max-height: 200px; /* altura suficiente para o texto */
+      }
+
+      .faq-question span {
+        font-size: 22px;
+        color: #7b147b;
+        transition: transform 0.3s;
+      }
+
+      .faq.active .faq-question span {
+        transform: rotate(45deg);
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #f1f1f1;
+        border-top: 1px solid #ddd;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
+        <span class="logo-text">Vyrex</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="index.html">Ofertas</a></li>
+          <li><a href="suporte.html">Suporte</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Perguntas Frequentes (FAQ)</h1>
+
+      <div class="faq">
+        <div class="faq-question">
+          <span>+</span> Como faço para comprar um jogo?
+        </div>
+        <div class="faq-answer">
+          <p>
+            Basta escolher o jogo desejado, clicar em "Comprar" e finalizar o
+            pagamento. Após a confirmação, você receberá o jogo em sua conta
+            Vyrex.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-question">
+          <span>+</span> Quais formas de pagamento são aceitas?
+        </div>
+        <div class="faq-answer">
+          <p>Aceitamos cartão de crédito, Pix e boleto bancário.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-question"><span>+</span> Posso pedir reembolso?</div>
+        <div class="faq-answer">
+          <p>
+            Sim, desde que o pedido seja feito em até 14 dias após a compra e o
+            jogo não tenha sido utilizado por mais de 2 horas.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-question">
+          <span>+</span> O suporte funciona em quais horários?
+        </div>
+        <div class="faq-answer">
+          <p>Nosso suporte é 24/7, disponível todos os dias da semana.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-question"><span>+</span> Os jogos têm garantia?</div>
+        <div class="faq-answer">
+          <p>
+            Sim, todos os jogos possuem garantia de funcionamento. Caso tenha
+            problemas, entre em contato com o suporte.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Vyrex - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+      const faqs = document.querySelectorAll(".faq");
+
+      faqs.forEach((faq) => {
+        faq.querySelector(".faq-question").addEventListener("click", () => {
+          faq.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
