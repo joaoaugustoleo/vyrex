@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League of Legends</title>
+
+    <!-- Link do Swiper CSS para o carrossel -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="vyrex_logo_dark.png" type="image/png" />
+
+    <style>
+      /* Estilos globais da página */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Header do site */
+      header {
+        background: #fff;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* Logo do header */
+      header img {
+        height: 40px;
+      }
+
+      /* Container da logo e nome do site */
+      .logo-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      .logo-container a {
+        text-decoration: none;
+      }
+
+      .logo-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+      }
+
+      /* Menu de navegação */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #7b147b;
+      }
+
+      /* Botão de login no menu */
+      nav ul li.login-btn a {
+        border: 5px solid #7b147b;
+        padding: 8px;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+
+      nav ul li.login-btn a:hover {
+        color: white;
+        background-color: #7b147b;
+      }
+
+      /* Container principal da página */
+      .main-container {
+        display: flex;
+        gap: 50px;
+        padding-left: 50px;
+        min-height: calc(100vh - 80px);
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      /* Container do carrossel */
+      .slide-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      /* Estilo do Swiper */
+      .swiper {
+        width: 750px;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #7b147b;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #7b147b;
+      }
+
+      /* Container do texto do slide */
+      .slide-text {
+        padding-bottom: 100px;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: visible;
+      }
+
+      /* Título do jogo */
+      .slide-text h1 {
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 25px;
+      }
+
+      /* Descrição do jogo */
+      .slide-text p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      /* Footer do site */
+      footer {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 01px;
+        margin-top: auto;
+      }
+
+      /* Botão de compra */
+      .buy-btn {
+        margin: 40px auto 0;
+        padding: 15px 75px;
+        text-align: center;
+        border-radius: 10px;
+        display: block;
+        background: #7b147b;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .buy-btn:hover {
+        background: #4e0e4e;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="vyrex_logo.png" alt="Vyrex Logo" id="logo" />
+          <span class="logo-text">Vyrex</span>
+        </a>
+      </div>
+
+      <!-- Menu de navegação -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Ofertas</a></li>
+          <li><a href="suporte.html">Suporte</a></li>
+          <li class="login-btn"><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="main-container">
+      <!-- Carrossel de imagens -->
+      <div class="slide-container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="lolimg1.jpg" /></div>
+            <div class="swiper-slide"><img src="lolimg2.jpeg" /></div>
+            <div class="swiper-slide"><img src="lolimg3.jpg" /></div>
+          </div>
+
+          <!-- Botões de navegação do carrossel -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Paginação do carrossel -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Texto descritivo do jogo -->
+      <div class="slide-text">
+        <h1>League of Legends</h1>
+        <p>
+          League of Legends é o MOBA mais jogado do mundo, onde estratégia,
+          habilidade e trabalho em equipe definem a vitória! Escolha entre mais
+          de 160 campeões únicos, cada um com habilidades e estilos de jogo
+          diferentes, e forme seu time ideal para dominar Summoner’s Rift.
+          Participe de partidas competitivas, suba no ranking e mostre sua força
+          em eventos e torneios emocionantes. Personalize seus campeões com
+          skins incríveis e efeitos visuais únicos, e transforme cada batalha em
+          uma experiência épica. Prepare-se para desafiar jogadores do mundo
+          todo, criar estratégias inteligentes e provar que você tem o que é
+          preciso para ser um verdadeiro campeão. Compre agora e mergulhe no
+          universo competitivo de League of Legends!
+        </p>
+
+        <!-- Botão de compra -->
+        <a href="checkoutfree.html" class="buy-btn">Gratuito - Comprar</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Vyrex. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script do carrossel Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Inicializa o Swiper
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: { delay: 3000, disableOnInteraction: false },
+      });
+    </script>
+  </body>
+</html>

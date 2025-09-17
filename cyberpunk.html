@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cyberpunk</title>
-    <!-- Swiper CSS -->
+    <title>Cyberpunk 2077</title>
+
+    <!-- Link do Swiper CSS para o carrossel -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <link rel="icon" href="vyrex_logo_dark.png" type="image/png" />
+
     <style>
+      /* Estilos globais da página */
       body {
         font-family: Arial, sans-serif;
         background-color: #f8f8f8;
@@ -17,6 +21,7 @@
         padding: 0;
       }
 
+      /* Header do site */
       header {
         background: #fff;
         padding: 15px 40px;
@@ -26,10 +31,12 @@
         border-bottom: 1px solid #ddd;
       }
 
+      /* Logo do header */
       header img {
         height: 40px;
       }
 
+      /* Container da logo e nome do site */
       .logo-container {
         display: flex;
         gap: 10px;
@@ -45,6 +52,7 @@
         color: black;
       }
 
+      /* Menu de navegação */
       nav ul {
         display: flex;
         list-style: none;
@@ -64,6 +72,7 @@
         color: #7b147b;
       }
 
+      /* Botão de login no menu */
       nav ul li.login-btn a {
         border: 5px solid #7b147b;
         padding: 8px;
@@ -76,22 +85,27 @@
         background-color: #7b147b;
       }
 
-      /* Container principal */
+      /* Container principal da página */
       .main-container {
         display: flex;
-        align-items: flex-start;
-        justify-content: center;
         gap: 50px;
-        padding: 50px;
-        min-height: calc(110vh - 80px); /* aumentei aqui */
-        flex-wrap: wrap;
         padding-left: 50px;
+        min-height: calc(100vh - 80px);
+        flex-wrap: wrap;
+        align-items: center;
       }
 
-      /* Slide */
+      /* Container do carrossel */
+      .slide-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      /* Estilo do Swiper */
       .swiper {
-        width: 650px;
-        height: 400px;
+        width: 750px;
+        height: 500px;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -112,38 +126,60 @@
         background: #7b147b;
       }
 
-      /* Texto */
+      /* Container do texto do slide */
       .slide-text {
+        padding-bottom: 100px;
         max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: visible;
       }
 
+      /* Título do jogo */
       .slide-text h1 {
+        text-align: center;
         font-size: 48px;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
       }
 
+      /* Descrição do jogo */
       .slide-text p {
-        font-size: 16px;
+        text-align: center;
+        font-size: 18px;
         line-height: 1.5;
       }
 
-      /* Responsivo */
-      @media (max-width: 1200px) {
-        .main-container {
-          flex-direction: column; /* slide e texto empilhados em telas menores */
-          gap: 30px;
-        }
-        .swiper {
-          width: 90%;
-          height: 300px;
-        }
-        .slide-text h1 {
-          font-size: 36px;
-        }
+      /* Footer do site */
+      footer {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 01px;
+        margin-top: auto;
+      }
+
+      /* Botão de compra */
+      .buy-btn {
+        margin: 40px auto 0;
+        padding: 15px 75px;
+        text-align: center;
+        border-radius: 10px;
+        display: block;
+        background: #7b147b;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .buy-btn:hover {
+        background: #4e0e4e;
       }
     </style>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <div class="logo-container">
         <a href="index.html">
@@ -151,6 +187,8 @@
           <span class="logo-text">Vyrex</span>
         </a>
       </div>
+
+      <!-- Menu de navegação -->
       <nav>
         <ul>
           <li><a href="index.html">Ofertas</a></li>
@@ -160,21 +198,27 @@
       </nav>
     </header>
 
-    <!-- Container principal para slide + texto -->
+    <!-- Conteúdo principal -->
     <main class="main-container">
-      <!-- Carrossel -->
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="cyberpunkimg1.jpg" /></div>
-          <div class="swiper-slide"><img src="cyberpunkimg2.jpg" /></div>
-          <div class="swiper-slide"><img src="cyberpunkimg3.png" /></div>
+      <!-- Carrossel de imagens -->
+      <div class="slide-container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="cyberpunkimg1.jpg" /></div>
+            <div class="swiper-slide"><img src="cyberpunkimg2.jpg" /></div>
+            <div class="swiper-slide"><img src="cyberpunkimg3.png" /></div>
+          </div>
+
+          <!-- Botões de navegação do carrossel -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Paginação do carrossel -->
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </div>
 
-      <!-- Texto do slide -->
+      <!-- Texto descritivo do jogo -->
       <div class="slide-text">
         <h1>CyberPunk 2077</h1>
         <p>
@@ -187,11 +231,21 @@
           Explore ruas neon, participe de missões intensas e descubra segredos
           sombrios em um universo cyberpunk cheio de ação, intriga e liberdade.
         </p>
+
+        <!-- Botão de compra -->
+        <a href="checkout.html" class="buy-btn">R$ 182,00 - Comprar</a>
       </div>
     </main>
 
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Vyrex. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script do carrossel Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
+      // Inicializa o Swiper
       const swiper = new Swiper(".swiper", {
         loop: true,
         pagination: { el: ".swiper-pagination", clickable: true },
